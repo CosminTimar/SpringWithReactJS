@@ -9,7 +9,6 @@ import java.util.Objects;
 @Getter
 @Setter
 @Entity
-
 @Table
 public class Employee {
 

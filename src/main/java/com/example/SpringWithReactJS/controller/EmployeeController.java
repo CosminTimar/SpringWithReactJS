@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
 
-@CrossOrigin("*")
+@CrossOrigin("http://localhost:3000")
 @RestController
 @RequestMapping("/api/v1/employee")
 public class EmployeeController{
@@ -25,7 +25,7 @@ public class EmployeeController{
     @GetMapping
     public ResponseEntity<List<Employee>> getEmployeeList(){
         List<Employee> employeeList = employeeService.getEmployeeList();
-        return new ResponseEntity<>(employeeList, HttpStatus.FOUND);
+        return new ResponseEntity<>(employeeList,HttpStatus.OK);
     }
 
     @GetMapping(path="/get-by-id/{id}")
